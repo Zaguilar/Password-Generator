@@ -1,14 +1,35 @@
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
+//generate random password
+function generate(){
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  //set password length
+  let complexity = document.getElementById("slider").value;
+  
+  //possible password values
+  let values = "ABCDEFGHIJKLMNOPQRSTUVWZYZabcdefghijklmnopqrstuvwxyz1234567890";
 
-  passwordText.value = password;
+  let password = "";
+  
+  //create for loop to choose password characters
+  for(var i = 0; i <= complexity; i++){
+      password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length - 1)));
+  }
 
+  //add password to textbox/display area
+  document.getElementById("display").value = password;
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+//set default length display of 25
+document.getElementById("length").innerHTML = "Length: 25";
+
+//function to set length based on slider position
+document.getElementById("slider").oninput = function(){
+
+  if(document.getElementById("slider").value > 0){
+      document.getElementById("length").innerHTML = "Length: " + document.getElementById("slider").value;
+  }
+  else{
+      document.getElementById("length").innerHTML = "Length: 1";
+
+    }
+  }
+  
