@@ -72,7 +72,7 @@ header {
   clear: both;
 }
 
-.btn {
+#btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
   border-radius: 25px;
@@ -97,7 +97,7 @@ button[disabled] {
   float: right;
 }
 
-#password {
+#display {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -134,4 +134,7 @@ button[disabled] {
   .btn {
     font-size: 0.8rem;
   }
+}
+body{
+  background-color: lightgray;
 }
