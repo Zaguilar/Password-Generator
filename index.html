@@ -18,14 +18,19 @@
         </div>
         <div class="card-body">
           <textarea
-            readonly
-            id="password"
+           id="display"
             placeholder="Your Secure Password"
             aria-label="Generated Password"
           ></textarea>
+            <br />
+            <input type="range" min="8" max="128" name="slider" id="slider">
+        
+            <br />
+            <button onclick="generate()" id="btn">Generate</button>
+            
+            <div id="length"></div>
+            
         </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
         </div>
       </div>
     </div>
