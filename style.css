@@ -97,6 +97,11 @@ button[disabled] {
   float: right;
 }
 
+#slider {
+  cursor: pointer;
+}
+
+
 #display {
   -webkit-appearance: none;
   -moz-appearance: none;
